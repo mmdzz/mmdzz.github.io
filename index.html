@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="mdzz" />
+    <meta name="keywords" content="mdzz,game" />
+    <meta name="theme-color" content="#212529" />
+    <!--baidu tongji-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?edefd4d2eb3e6a534f7c6c437db9eeae";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--end-->
+    <link rel="shortcut icon" sizes="196x196" href="https://image.flaticon.com/icons/svg/138/138533.svg">
+    <title>MDZZ</title>
+
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+
+    <script src="./dialog-polyfill.js"></script>
+    <script src="./highlight.js"></script>
+
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "UA-41640153-4");</script>
+    <script>
+        if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
+            window.alert('IE is not supported on this page.')
+        }
+
+    </script>
+  
+  
+
+</head>
+
+<body>
+    <div id="nescss">
+        <header :class="{ sticky: scrollPos > 50 }">
+            <div class="container">
+                <div class="nav-brand">
+                        <h1>
+                            <i class="nes-icon heart"></i>
+                            MDZZ</h1>
+                    <p> 本游戏好友系统 Q群: 450704710</p>
+<!--fenxiang-->
+<div class="bdsharebuttonbox" data-tag="share_1">
+	<!-- <a class="bds_mshare" data-cmd="mshare"></a> -->
+	<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+	<a class="bds_sqq" data-cmd="sqq"></a>
+	<a class="bds_tsina" data-cmd="tsina"></a>
+	<a class="bds_weixin" data-cmd="weixin"></a>
+	<!-- <a class="bds_renren" data-cmd="renren"></a> -->
+	<a class="bds_more" data-cmd="more"></a>
+	<a class="bds_count" data-cmd="count"></a>
+</div>
+<script>
+	window._bd_share_config = {
+		common : {
+			bdText : 'mdzz',	
+			bdDesc : '这个太好玩啦,一起来玩',	
+            bdUrl : 'http://mdzz.xyz', 	
+            bdPic : 'http://mdzz.xyz/qr.png'
+		},
+		share : [{
+			"bdSize" : 16
+		}],
+		slide : [{	   
+			bdImg : 4,
+			bdPos : "right",
+			bdTop : 100
+		}],
+		image : [{
+			viewType : 'list',
+			viewPos : 'top',
+			viewColor : 'black',
+			viewSize : '16',
+			viewList : ['qzone','tsina','huaban','tqq','renren']
+		}],
+		selectShare : [{
+			"bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+		}]
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<!--end-->
+            </div>
+        </header>
+
+        <div class="container">
+            <main class="main-content">
+                <!-- <section class="topic">
+                        <h2 ><span style="color:#007bff;margin-right: 1rem;">#</span>捐助</h2>
+                        <div class="center">
+                        <h4>由于个人开发者资质问题无法开放商城,</br>目前广告收入完全不能支撑服务器费用,</br>为了达到至少收支平衡,希望有能力的玩家可以支撑一下.谢谢!</br></br></h4>
+                        </div>
+                        <div class="center">
+                            <img style="margin-right: 10rem;"width="240" height="240" src="./wx.jpg">
+                            <img width="240" height="240" src="./zfb.jpg">
+                        </div>
+                </section> -->
+                    <section class="topic">
+                            <h2 ><span style="color:#007bff;margin-right: 1rem;">#</span>Apk</h2>
+                        <div class="center">
+                            <!-- <img width="240" height="240" src="./qr.png"> -->
+                        </div>
+                    </br>
+                        <div class="center">
+                        <a href="./1.18.0.apk"><button style="color:black;width: 120" class="nes-btn is-success download hanzi">下载 1.18.0</button></a> &nbsp
+                        <a href="https://docs.qq.com/sheet/DRnlodEVMV3ZzQmRQ"><button style="color:black;width: 120" class="nes-btn is-success download hanzi">BUG/建议</button></a>    
+                    </div>
+                    </section>
+                
+                <section class="topic">
+                    <h2 ><span style="color:#007bff;margin-right: 1rem;">#</span>更新日志</h2>
+                    <h4>v1.18.0 皮肤+框选</h4>
+                    <h4>v1.17.1 修复[与]bug</h4>
+                    <h4>v1.17.0 修复图层bug,小bug修复</h4>
+                    <h4>v1.16.0 图层,小bug修复</h4>
+                    <h4>v1.15.0 与信号支持旋转平台</h4>
+                    <h4>v1.14.0 信号发生器又被玩炸了</h4>
+                    <h4>v1.13.0 修复信号发生器爆炸</h4>
+                    <h4>v1.12.0 新增'反义信号','与信号发生器'</h4>
+                    <h4>v1.11.0 组队</h4>
+                    <h4>v1.10.0 乌龟技能修改</h4>
+                    <h4>v1.9.0 乌龟参战!</h4>
+                    <h4>v1.8.0 修复创意工坊按钮大小不一致,狗子/炸鸡可能穿墙,注册失败提示</h4>
+                    <h4>v1.7.0 修复传送门bug</h4>
+                    <h4>v1.5.0 新增收藏地图,关注玩家,地图点赞,地图简介,地图排行榜</h4>
+                    <h4>v1.4.0 修正狗鬼畜/鸡蛋穿墙/编辑器点BUG,测试加变身,编辑器缩放,鸡技能修改为爆炸可控(再按一下A爆炸)</h4>
+                    <h4>v1.2.0 新元素说明忘记写了.</h4>
+                    <h4>v1.1.1 修复覆盖安装可能失败</h4>
+                    <h4>v1.1.0 箱子优化,手感优化,鸡改小,传送门,存档点,狗穿墙修正,炸弹穿墙修正,编辑器旗大小修改</h4>
+                    <h4>v1.0.14 修复全自动发生器信号设置bug</h4>
+                    <h4>v1.0.10 新地图列表.新打分机制.新地图元素.bug修复</h4>
+                    <h4>v1.0.9 参数调整,优化手感.</h4>
+                    <h4>v1.0.8 移除付费,增加广告.修复几个服务器爆炸bug.</h4>
+                    <h4>v1.0.7 继续网络优化.</h4>
+                    <h4>v1.0.6 网络优化.</h4>
+                    <h4>v1.0.5 地图大小限制解除.星星获得修复.旋转平台方向设置.时间设置,刺尖碰撞修改.摄像机设置,删除地图,还有不记得了..</h4>
+                    <h4>v1.0.4 创意工坊Beta.</h4>
+                    <h4>v1.0.3 延时卡顿优化.</h4>
+                    <h4>v1.0.2 自定义按键布局,修复卡角色bug,炸弹穿墙,回放第一次不能看.</h4>
+                    <h4>v1.0.1 增加回放功能 ,修复权限导致打不开游戏,修复狗投掷穿墙.</h4>
+                    <h4>v1.0.0 默认角色修改 ,开游戏灰屏幕,进设置把游戏需要的所有权限打开试试.</h4>
+            </section>
+
+                <!-- </section> -->
+              
+                <!--J begin-->
+                <section class="nes-container with-title">
+                    <h3 class="title">留 言 板</h3>
+          <!--PL BEGIN-->
+          <!-- LiveRe City install code -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MzQ2MC8yMDAwMA==">
+        <script type="text/javascript">
+           (function(d, s) {
+               var j, e = d.getElementsByTagName(s)[0];
+        
+               if (typeof LivereTower === 'function') { return; }
+        
+               j = d.createElement(s);
+               j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+               j.async = true;
+        
+               e.parentNode.insertBefore(j, e);
+           })(document, 'script');
+        </script>
+        <noscript>Please activate JavaScript for write a comment in LiveRe</noscript>
+        </div>
+        <!-- completed City install code -->
+          <!--PL END-->
+                </section>
+                <!--J end-->
+            </main>
+
+            <footer>
+                <p>
+                    <span>&copy;2019</span>
+                    JStudio
+                </p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+<script src="./script.js" ></script>
+</html>
