@@ -23,7 +23,7 @@ var _hmt = _hmt || [];
     <link rel="shortcut icon" sizes="196x196" href="https://image.flaticon.com/icons/svg/138/138533.svg">
     <title>MDZZ</title>
 
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="./nes.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
@@ -95,6 +95,33 @@ var _hmt = _hmt || [];
 <!--end-->
             </div>
         </header>
+<!--jz-->
+        <script type="text/javascript">
+        var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+function gotojz(){
+    var n = $_GET['n']
+    if(typeof(n)!="undefined"){
+        window.location = "http://mdzz.xyz/jz.html?n="+n
+    }else{
+        window.location = "http://mdzz.xyz/jz.html"
+    }
+    //window.location = "http://mdzz.xyz/jz.html"
+}
+        </script>
 
         <div class="container">
             <main class="main-content">
@@ -102,14 +129,14 @@ var _hmt = _hmt || [];
                             <div class="center">
                                 <h4>自助捐赠机 [捐赠1元送5金币] (只支持微信)</h4>
                                 <!-- <h4>[活动] 首捐 6 元以上送狗子~</h4> -->
-                                    <a href="http://mdzz.xyz/jz.html"><button style="color:black;width: 120" class="nes-btn is-success download hanzi">捐赠</button></a>
+                                    <button onclick="gotojz()" style="color:black;width: 120" class="nes-btn is-success download hanzi">捐赠</button>
                             </div>
 
 
                         </div>
                         <div class="center">
-                                <h4>其他加Q群找作者: 450704710 </h4>
-                                <a href="https://shang.qq.com/wpa/qunwpa?idkey=93c2cfe7291f039bbe779153439adb852d19f78edb10f4efd31591c63ba7e514"><button style="color:black;width: 120" class="nes-btn is-success download hanzi">加入</button></a>
+                                <h4>其他加Q群找作者: 46913981 </h4>
+                                <a href="https://shang.qq.com/wpa/qunwpa?idkey=639beeba703ced8fc50c1a21286c20027e8a77d41225d5f666b38823a6e2f3a0"><button style="color:black;width: 120" class="nes-btn is-success download hanzi">加入</button></a>
                         </div>
                 </section>
             </br>

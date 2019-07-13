@@ -22,7 +22,7 @@
     <link rel="shortcut icon" sizes="196x196" href="https://image.flaticon.com/icons/svg/138/138533.svg">
     <title>MDZZ</title>
 
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="./nes.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
@@ -75,11 +75,39 @@
                             </div>
                             <!-- </div> -->
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--name-->
 <script type="text/javascript">
+        var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+
+function fill(){
+    var n = $_GET['n']
+    if(typeof(n)!="undefined"){
+        n=decodeURI(n);
+        document.getElementById("user").value=n;
+        document.getElementById("money").value=10;
+    }
+}
+window.onload = fill; 
+</script>
+<script type="text/javascript">
+
 // new QRCode(document.getElementById("qrcode"), "111");
  var qr;
 var a=function(){
-
     user = document.getElementById("user").value;
     money = document.getElementById("money").value;
 
