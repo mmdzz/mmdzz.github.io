@@ -70,11 +70,13 @@
                             text-align: center;
                         }
                     </style>
-                    <div  id="grid" style="width:100%;height:600px;position:relative;">
-                       
+                    <h3 ><span style="color:#007bff;margin-right: 1rem;">#</span>官方群</h3>
+                    <div  id="gf" style="width:100%;height:130px;position:relative;"></div>
+                    <h3 ><span style="color:#007bff;margin-right: 1rem;">#</span>公会</h3>
+                    <div  id="gh" style="width:100%;height:600px;position:relative;"></div>
                         <!--jsbtn-->
                         <script>
-                            var array = [
+                            var array_gf = [
                                 {
                                     url:"https://shang.qq.com/wpa/qunwpa?idkey=d53394799dccc33440e8fea8cfa9ece1ddadf9cb35e3e81efcc6a7a726486866",
                                     title:"世界频道③",
@@ -85,6 +87,9 @@
                                     title:"世界频道①",
                                     desc:"群号: 450704710",
                                 },
+                            ]
+
+                            var array_gh = [
                                 {
                                     url: "https://jq.qq.com/?_wv=1027&k=55D0K6P",
                                     title: "休闲图制作交流群",
@@ -106,7 +111,8 @@
                                     desc:"群号: 529209473",
                                 },
                             ]
-                            var grid = document.getElementById("grid");
+                            var grid = document.getElementById("gf");
+                            var array = array_gf;
                             for (let index = 0; index < array.length; index++) {
                                 const e = array[index];
                                 var bt = document.createElement("div");
@@ -114,11 +120,18 @@
                                 bt.innerHTML = '<div class="csFloat"><div class="csButton"><a href="'+e.url+'"><button style="color:black;width: 110;height:70;"class="nes-btn is-success download hanzi">'+e.title+'</button></a></div><div class="csFont">'+e.desc+'</div></div>'
                                 grid.appendChild(bt);
                             }
-
+                            var array = array_gh;
+                            grid = document.getElementById("gh");
+                            for (let index = 0; index < array.length; index++) {
+                                const e = array[index];
+                                var bt = document.createElement("div");
+                                bt.className = "csFloat";
+                                bt.innerHTML = '<div class="csFloat"><div class="csButton"><a href="'+e.url+'"><button style="color:black;width: 110;height:70;"class="nes-btn is-error download hanzi">'+e.title+'</button></a></div><div class="csFont">'+e.desc+'</div></div>'
+                                grid.appendChild(bt);
+                            }
                         </script>
                         <!---->
-
-                    </div>
+ 
 
             </section>
             </br>
