@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="mdzz" />
+    <meta name="keywords" content="mdzz,game" />
+    <meta name="theme-color" content="#212529" />
+    <!--baidu tongji-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?edefd4d2eb3e6a534f7c6c437db9eeae";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+<!--end-->
+<script src="./qr.js"></script>
+    <link rel="shortcut icon" sizes="196x196" href="https://image.flaticon.com/icons/svg/138/138533.svg">
+    <title>MDZZ</title>
+
+    <link href="./nes.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+
+    <script src="./dialog-polyfill.js"></script>
+    <script src="./highlight.js"></script>
+
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "UA-41640153-4");</script>
+    <script>
+        if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
+            window.alert('IE is not supported on this page.')
+        }
+
+    </script>
+  
+  
+
+</head>
+
+<body>
+    <div id="nescss">
+        <header :class="{ sticky: scrollPos > 50 }">
+            <div class="container">
+                <div class="nav-brand">
+                        <h1>
+                            <i class="nes-icon heart"></i>
+                            MDZZ</h1>
+                    <p> 本游戏好友系统 Q群: 450704710</p>
+<!--fenxiang-->
+<!--end-->
+            </div>
+        </header>
+
+        <div class="container">
+            <main class="main-content">
+                <section class="topic">
+                        <h2 ><span style="color:#007bff;margin-right: 1rem;">#</span>捐助送金币 [每捐1元送5金币]</h2>
+                        
+                        <!-- <div class="nes-field" width="200"> -->
+                                <label width="200" for="name_field">角色名</label>
+                                <input id="user" width="200" type="text" id="name_field" class="nes-input">
+                                <label width="200" for="name_field">金额(元)</label>
+                                <input id="money" width="200" type="number" id="name_field" class="nes-input">
+                                <div style="text-align: center;padding :20">
+                                    <div style="text-align:center">
+                                        <div id="qrcode"></div>
+                                </div>
+                                    <h5>*手机可以截图->微信->扫一扫->相册->支付</h5>
+                                <button style="color:black" class="nes-btn is-success" onclick="a()">出来吧!微信二维码!</button>
+                            </div>
+                            <!-- </div> -->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--name-->
+<script type="text/javascript">
+        var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+
+function fill(){
+    var n = $_GET['n']
+    if(typeof(n)!="undefined"){
+        n=decodeURI(n);
+        document.getElementById("user").value=n;
+        document.getElementById("money").value=10;
+    }
+}
+window.onload = fill; 
+</script>
+<script type="text/javascript">
+
+// new QRCode(document.getElementById("qrcode"), "111");
+ var qr;
+var a=function(){
+    user = document.getElementById("user").value;
+    money = document.getElementById("money").value;
+
+
+    $.ajax(
+        {
+    type: "POST",
+    dataType:'json',
+   crossDomain: true,
+        url:"http://pay.mdzz.xyz:8888/?name="+user+"&money="+money,
+
+          success: function(data) {
+            if(qr!=null){
+                qr.clear();
+                qr.makeCode(data.Url);
+            }else{
+                qr = new QRCode(document.getElementById("qrcode"),data.Url);
+            }
+            document.getElementById("qrcode").title="";
+          },
+          error: function(request, error) {
+            alert("输入数据错误")
+          },
+          complete: function(XMLHttpRequest, status) { 
+            
+    }});
+};
+</script>
+                </section>
+              
+            </main>
+
+            <footer>
+                <p>
+                    <span>&copy;2019</span>
+                    JStudio
+                </p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+<script src="./script.js" ></script>
+</html>
