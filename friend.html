@@ -23,8 +23,8 @@
     <link rel="shortcut icon" sizes="196x196" href="https://image.flaticon.com/icons/svg/138/138533.svg">
     <title>MDZZ</title>
 
-    <link href="./nes.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
+    <link href="./nes2.css" rel="stylesheet" />
+    <!-- <link href="./style.css" rel="stylesheet" /> -->
 
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
 
@@ -48,9 +48,6 @@
         <main class="main-content">
             <section class="topic">
                 <div>
-
-
-
                     <style type="text/css">
                         .csFloat {
                             float: left;
@@ -70,6 +67,10 @@
                             text-align: center;
                         }
                     </style>
+                    <h4 ><span style="color:#007bff;margin-right: 1rem;">#</span>捐赠</h4>
+                    <div  id="jz" style="width:100%;height:130px;position:relative;">
+                        <div class="csFloat"><div class="csFloat"><div class="csButton"><a href="./jz.html"><button style="color:black;width: 110;height:70;" class="nes-btn is-error download hanzi">捐赠1元送5金!</button></a></div><div class="csFont">去捐赠</div></div></div>
+                    </div>
                     <h4 ><span style="color:#007bff;margin-right: 1rem;">#</span>官方群</h4>
                     <div  id="gf" style="width:100%;height:130px;position:relative;"></div>
                     <h4 ><span style="color:#007bff;margin-right: 1rem;">#</span>同好会</h4>
@@ -78,53 +79,28 @@
                         <script>
                             var array_gf = [
                                 {
+                                    url:"https://jq.qq.com/?_wv=1027&k=5dccS3w",
+                                    title:"mdzz的奇妙冒险②",
+                                    desc:"群号: 744670300",
+                                },
+                                {
                                     url:"https://jq.qq.com/?_wv=1027&k=5Jvn0sW",
-                                    title:"世界频道③",
+                                    title:"mdzz的奇妙冒险③",
                                     desc:"群号: 766166763",
                                 },
                                 {
-                                    url:"https://jq.qq.com/?_wv=1027&k=5a5vgDn",
-                                    title:"世界频道①",
-                                    desc:"群号: 450704710",
+                                    url:"https://jq.qq.com/?_wv=1027&k=5lFPojW",
+                                    title:"mdzz的奇妙冒险④",
+                                    desc:"群号: 908796673",
                                 },
                             ]
 
                             var array_gh = [
                                 {
-                                    url: "https://jq.qq.com/?_wv=1027&k=5Mqu8uq",
-                                    title: "接力做图群",
-                                    desc:"群号: 922511159",
-                                },
-                                {
-                                    url: "https://jq.qq.com/?_wv=1027&k=5p3iwN2",
-                                    title: "mdzz尬图群",
-                                    desc:"群号: 887193659",
-                                },
-                                {
-                                    url: "https://jq.qq.com/?_wv=1027&k=5L9RWWw",
-                                    title: "mdzz科技交流群",
-                                    desc:"群号: 568206899",
-                                },
-                                {
-                                    url: "https://jq.qq.com/?_wv=1027&k=55D0K6P",
-                                    title: "休闲图制作交流群",
-                                    desc:"群号: 261276746",
-                                },
-                                {
-                                    url: "https://jq.qq.com/?_wv=1027&k=5JVxfDz",
-                                    title: "创意图制作交流群",
-                                    desc:"群号: 801131348",
-                                },
-                                {
-                                    url: "https://jq.qq.com/?_wv=1027&k=57OsEug",
-                                    title: "剧情图制作交流群",
-                                    desc:"群号: 582151561",
-                                },
-                                {
-                                    url: "https://jq.qq.com/?_wv=1027&k=57FqCFb",
-                                    title: "带把魔导师的学术讨论",
-                                    desc:"群号: 529209473",
-                                },
+                                    url: "https://jq.qq.com/?_wv=1027&k=5Dq7RpT",
+                                    title: "mdzz皮肤制作学院",
+                                    desc:"群号: 317881433",
+                                }
                             ]
                             var grid = document.getElementById("gf");
                             var array = array_gf;

@@ -7,39 +7,17 @@
     <meta name="description" content="mdzz" />
     <meta name="keywords" content="mdzz,game" />
     <meta name="theme-color" content="#212529" />
-    <!--baidu tongji-->
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?edefd4d2eb3e6a534f7c6c437db9eeae";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
-<!--end-->
-<script src="./qr.js"></script>
-    <link rel="shortcut icon" sizes="196x196" href="https://image.flaticon.com/icons/svg/138/138533.svg">
     <title>MDZZ</title>
+    <link href="./nes2.css" rel="stylesheet" />
+    <!-- <link href="./style.css" rel="stylesheet" /> -->
 
-    <link href="./nes.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
-
-    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
-
-    <script src="./dialog-polyfill.js"></script>
-    <script src="./highlight.js"></script>
-
+  
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "UA-41640153-4");</script>
     <script>
         if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
             window.alert('IE is not supported on this page.')
         }
-
     </script>
-  
-  
-
 </head>
 
 <body>
@@ -48,8 +26,6 @@
             <main class="main-content">
                 <section class="topic">
                         <h2 ><span style="color:#007bff;margin-right: 1rem;">#</span>捐助送金币 [每捐1元送5金币]</h2>
-                        
-                        <!-- <div class="nes-field" width="200"> -->
                                 <label width="200" for="name_field">角色名</label>
                                 <input id="user" width="200" type="text" id="name_field" class="nes-input">
                                 <label width="200" for="name_field">金额(元)</label>
@@ -64,6 +40,11 @@
                             <!-- </div> -->
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <!--name-->
+<script src="./qr.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+
+<script src="./dialog-polyfill.js"></script>
+<script src="./highlight.js"></script>
 <script type="text/javascript">
         var $_GET = (function(){
     var url = window.document.location.href.toString();
@@ -92,14 +73,10 @@ function fill(){
 window.onload = fill; 
 </script>
 <script type="text/javascript">
-
-// new QRCode(document.getElementById("qrcode"), "111");
  var qr;
 var a=function(){
     user = document.getElementById("user").value;
     money = document.getElementById("money").value;
-
-
     $.ajax(
         {
     type: "POST",

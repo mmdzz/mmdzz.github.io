@@ -9,7 +9,7 @@ body {
 #nescss > .container {
   max-width: 980px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
 /* Header */
@@ -28,7 +28,7 @@ header > .container {
   align-items: baseline;
   max-width: 980px;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 0rem;
   transition: all 0.2s ease;
 }
 
@@ -86,7 +86,7 @@ h2 > a {
 }
 
 .topic {
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
 }
 
 
