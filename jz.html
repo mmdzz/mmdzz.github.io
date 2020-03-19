@@ -26,6 +26,9 @@
             <main class="main-content">
                 <section class="topic">
                         <h2 ><span style="color:#007bff;margin-right: 1rem;">#</span>捐助送金币 [每捐1元送5金币]</h2>
+                        <h4 style="color:red">限时活动!</h4>
+                        <h4 style="color:red">* 累计满10元,永久每次过关额外多3星!</h4>
+                        <!-- <h4 style="color:red">* 累计满90元,送永久限定特效皮肤[花里胡哨狗]!(角色界面领取)</h4> -->
                                 <label width="200" for="name_field">角色名</label>
                                 <input id="user" width="200" type="text" id="name_field" class="nes-input">
                                 <label width="200" for="name_field">金额(元)</label>
@@ -35,12 +38,14 @@
                                         <div id="qrcode"></div>
                                 </div>
                                     <h5>*手机可以截图->微信->扫一扫->相册->支付</h5>
-                                <button style="color:black" class="nes-btn is-success" onclick="a()">出来吧!微信二维码!</button>
+                                <button style="color:black" class="nes-btn is-success" onclick="a()">出来吧!微信二维码!</button> 
+                                <button  style="color:black" class="nes-btn is-success"  onclick="b()" >其他方式/遇到问题</button>
                             </div>
-                            <!-- </div> -->
+                            </div>
+                            
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <!--name-->
-<script src="./qr.js"></script>
+
 <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
 
 <script src="./dialog-polyfill.js"></script>
@@ -74,6 +79,11 @@ window.onload = fill;
 </script>
 <script type="text/javascript">
  var qr;
+
+var b=function(){
+    window.location.href="https://jq.qq.com/?_wv=1027&k=5LEesbf";
+};
+
 var a=function(){
     user = document.getElementById("user").value;
     money = document.getElementById("money").value;
@@ -116,4 +126,5 @@ var a=function(){
     </div>
 </body>
 <script src="./script.js" ></script>
+<script src="./qr.js"></script>
 </html>
